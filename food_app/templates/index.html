@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block body_block %}
+
+<div class="row container mx-auto ps-5 ml-5" style="width: 90%">
+  {% for meal in meals %}
+  <div class="card col-4 mb-3 me-2" style="width: 18rem">
+    <img src="{{meal.strMealThumb}}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{meal.strMeal}}</h5>
+      <p class="card-text">
+        Our fragrant green curry simmers with tender chicken, plump bamboo
+        shoots, and fragrant Thai basil, all bathed in a creamy coconut milk
+        sauce that's guaranteed to awaken your taste buds.
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
